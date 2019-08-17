@@ -9,7 +9,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:math' as math;
 import 'dart:typed_data';
-import 'dart:ui' as ui show Image;
+import 'package:flutter_web_ui/ui.dart' as ui show Image;
 
 import 'package:flutter_web/gestures.dart';
 import 'package:flutter_web/rendering.dart';
