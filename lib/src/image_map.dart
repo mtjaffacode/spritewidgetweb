@@ -24,14 +24,13 @@ class ImageMap {
   Future<ui.Image> loadImage(String url) async {
     ImageStream stream = new AssetImage(url, bundle: _bundle).resolve(ImageConfiguration.empty);
     Completer<ui.Image> completer = new Completer<ui.Image>();
-    ImageStreamListener listener;
-    listener = new ImageStreamListener(
-    (ImageInfo frame, bool synchronousCall) {
+    var listener;
+    listener = (ImageInfo frame, bool synchronousCall) {
       final ui.Image image = frame.image;
       _images[url] = image;
       completer.complete(image);
       stream.removeListener(listener);
-    });
+    };
     stream.addListener(listener);
     return completer.future;
   }
