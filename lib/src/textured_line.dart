@@ -58,11 +58,11 @@ class TexturedLinePainter {
       _cachedPaint = new Paint();
     } else {
       Matrix4 matrix = new Matrix4.identity();
-      ImageShader shader = new ImageShader(texture.image,
-        TileMode.repeated, TileMode.repeated, matrix.storage);
+      // ImageShader shader = new ImageShader(texture.image,
+      //   TileMode.repeated, TileMode.repeated, matrix.storage);
 
-      _cachedPaint = new Paint()
-        ..shader = shader;
+      _cachedPaint = new Paint();
+        // ..shader = shader;
     }
   }
 
