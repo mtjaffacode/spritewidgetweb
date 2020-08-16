@@ -9,14 +9,14 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:math' as math;
 import 'dart:typed_data';
-import 'package:flutter_web_ui/ui.dart' as ui show Image;
+import 'ui.dart' as ui show Image;
 
-import 'package:flutter_web/gestures.dart';
-import 'package:flutter_web/rendering.dart';
-import 'package:flutter_web/scheduler.dart';
-import 'package:flutter_web/services.dart';
-import 'package:flutter_web/widgets.dart';
-import 'package:flutter_web/painting.dart';
+import 'package:flutter/gestures.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter/painting.dart';
 import 'package:meta/meta.dart';
 import 'package:vector_math/vector_math_64.dart';
 
