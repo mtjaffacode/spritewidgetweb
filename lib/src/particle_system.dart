@@ -460,10 +460,11 @@ class ParticleSystem extends Node {
         }
         colors.add(particleColor);
       }
+      canvas.drawImageRect(texture.image, rect, rect, _paint);
     }
 
-    canvas.drawAtlas(texture.image, transforms, rects, colors,
-        BlendMode.modulate, null, _paint);
+//    canvas.drawAtlas(texture.image, transforms, rects, colors,
+//        BlendMode.modulate, null, _paint);
   }
 }
 
