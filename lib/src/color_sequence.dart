@@ -42,33 +42,33 @@ class ColorSequence {
     if (pos == double.nan) {
       return colors[0];
     }
-      if (pos < 0.0 || pos > 1.0) {
-        return colors[0];
-      }
-      if (!(pos >= 0.0 && pos <= 1.0)) {
-        return colors[0];
-      }
+    if (pos < 0.0 || pos > 1.0) {
+      return colors[0];
+    }
+    if (!(pos >= 0.0 && pos <= 1.0)) {
+      return colors[0];
+    }
 //    assert(pos >= 0.0 && pos <= 1.0);
 
-      if (pos == 0.0) return colors[0];
+    if (pos == 0.0) return colors[0];
 
-      double lastStop = colorStops[0];
-      Color lastColor = colors[0];
+    double lastStop = colorStops[0];
+    Color lastColor = colors[0];
 
-      for (int i = 0; i < colors.length; i++) {
-        double currentStop = colorStops[i];
-        Color currentColor = colors[i];
+    for (int i = 0; i < colors.length; i++) {
+      double currentStop = colorStops[i];
+      Color currentColor = colors[i];
 
-        if (pos <= currentStop) {
-          double blend = (pos - lastStop) / (currentStop - lastStop);
-          return _interpolateColor(lastColor, currentColor, blend);
-        }
-        lastStop = currentStop;
-        lastColor = currentColor;
+      if (pos <= currentStop) {
+        double blend = (pos - lastStop) / (currentStop - lastStop);
+        return _interpolateColor(lastColor, currentColor, blend);
       }
-      return colors[colors.length-1];
+      lastStop = currentStop;
+      lastColor = currentColor;
     }
-
+    return colors[colors.length - 1];
+  }
+}
 
 Color _interpolateColor(Color a, Color b, double blend) {
   double aa = a.alpha.toDouble();
