@@ -68,8 +68,7 @@ class ColorSequence {
       }
       return colors[colors.length-1];
     }
-  }
-}
+
 
 Color _interpolateColor(Color a, Color b, double blend) {
   double aa = a.alpha.toDouble();
